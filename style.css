@@ -556,8 +556,9 @@ td[rowspan="2"]{
   }
 
 .celula-bandeiras .pais img {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
+    image-rendering: auto;
 }
 
 .celula-ponto-nivel {
