@@ -117,11 +117,11 @@ tr:hover {
 }
 
 .pais img {
-  width: 20px;
-  height: 15px;
-  object-fit: cover;
-  border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.15);
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 footer {
@@ -372,7 +372,7 @@ tr.destacada td.fixa-participante {
 
 /* Layout em duas linhas por participante */
 .celula-bandeiras {
-  padding: 3px 5px 1px;
+  padding: 4px 2px 1px;
   text-align: center;
   vertical-align: bottom;
   border-bottom: none;
@@ -394,8 +394,9 @@ tr.destacada td.fixa-participante {
 }
 
 .celula-bandeiras .pais img {
-  width: 40px;
-  height: 40px;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
 }
 
 /* Remove a linha divisória entre bandeira e ponto */
@@ -554,15 +555,12 @@ td[rowspan="2"]{
     font-size: 19px;
   }
 
-  /* bandeiras */
-  .celula-bandeiras .pais img {
-    width: 28px;
-    height: 21px;
-  }
+.celula-bandeiras .pais img {
+    width: 42px;
+    height: 42px;
+}
 
-  /* pontuação de cada nível */
-  .celula-ponto-nivel {
+.celula-ponto-nivel {
     font-size: 14px;
-  }
-
+}
 }
