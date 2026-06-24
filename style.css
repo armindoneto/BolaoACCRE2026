@@ -1,0 +1,568 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+radial-gradient(circle at top left,
+#3CAC3B55 0%,
+transparent 30%),
+radial-gradient(circle at top,
+#2A398D66 0%,
+transparent 40%),
+radial-gradient(circle at top right,
+#E61D2555 0%,
+transparent 30%),
+#020617;
+  color: #e5e7eb;
+}
+
+.hero {
+  padding: 28px 20px 18px;
+  text-align: center;
+}
+
+.banner-titulo {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+.container {
+  padding: 20px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.painel-wrapper {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.4);
+  width: fit-content;
+max-width: 100%;
+margin: 0 auto;
+}
+
+.card {
+  padding: 0;
+  max-height: 72vh;
+  overflow: auto;
+  background: #020617;
+}
+
+input {
+  width: 100%;
+  max-width: 420px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+}
+
+table {
+  margin: 0%;
+  width: auto;
+  border-collapse: collapse;
+  min-width: auto;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background:#2A398D;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+td {
+  padding: 5px 6px;
+  border-bottom: 1px solid #1e293b;
+  font-size: 12px;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+}
+
+tr:hover {
+  background: #111827;
+}
+
+.posicao {
+  font-weight: bold;
+  color: #facc15;
+  font-size: 14px;
+}
+
+.pontos {
+  font-weight: bold;
+  color: #38bdf8;
+  font-size: 14px;
+}
+
+.pais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.pais img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.15);
+}
+
+footer {
+  text-align: center;
+  color: #94a3b8;
+  padding: 20px;
+  font-size: 11px;
+}
+
+/* Segunda coluna (Participante) alinhada à esquerda */
+th:nth-child(2),
+td:nth-child(2) {
+    text-align: left;
+}
+
+/* Congela a primeira linha */
+thead th {
+  position: sticky;
+  top: 0;
+  background: #166534;
+  z-index: 30;
+}
+
+/* Canto superior esquerdo: primeira célula do cabeçalho */
+thead th:first-child {
+  top: 0;
+  left: 0;
+  background: #166534;
+  z-index: 50;
+}
+
+/* Segunda célula do cabeçalho */
+thead th:nth-child(2) {
+  top: 0;
+  left: 40px;
+  background: #166534;
+  z-index: 50;
+}
+
+/* Destaque Top 4 */
+tr.top1 td {
+  background: rgba(250, 204, 21, 0.25);
+}
+
+tr.top2 td {
+  background: rgba(203, 213, 225, 0.18);
+}
+
+tr.top3 td {
+  background: rgba(180, 83, 9, 0.22);
+}
+
+tr.top4 td {
+  background: rgba(34, 197, 94, 0.14);
+}
+
+/* Destaque último colocado */
+tr.ultimo td {
+  background: rgba(239, 68, 68, 0.18);
+}
+
+.barra-painel {
+ background:#020617;
+  padding: 14px 16px;
+  border-bottom: 1px solid #1e293b;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  z-index: 200;
+}
+
+.titulo-barra {
+  font-weight: bold;
+  font-size: 16px;
+  color: #e5e7eb;
+  white-space: nowrap;
+}
+
+/* Busca */
+tr.destacada td {
+    background: rgba(59, 130, 246, 0.30) !important;
+    transition: 0.2s;
+}
+
+tr.apagada td {
+    color: #475569;
+}
+
+/* Busca: apenas células fixas ficam sólidas */
+tr.apagada td.fixa-c,
+tr.apagada td.fixa-participante {
+  background: #020617 !important;
+}
+
+tr.destacada td.fixa-c,
+tr.destacada td.fixa-participante {
+  background: #1e3a8a !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 18px 10px 10px;
+  }
+
+  .banner-titulo {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+.menu-principal {
+  max-width: 1500px;
+  margin: 0 auto 16px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.botao-menu {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 999px;
+
+  background: #0f172a;
+  border: 1px solid #334155;
+
+  transition: all .2s ease;
+}
+
+.botao-menu:hover {
+  background: #1e293b;
+  border-color: #64748b;
+}
+
+.botao-menu.ativo {
+  background: #1e293b;
+  border: 2px solid #2A398D;
+  color: white;
+}
+
+.card-equipes {
+  padding: 20px;
+  background: #020617;
+  max-height: 72vh;
+  overflow: auto;
+}
+
+.bloco-equipe {
+  border-bottom: 1px solid #1e293b;
+  padding: 16px 0;
+}
+
+.bloco-equipe:first-child {
+  padding-top: 0;
+}
+
+.bloco-equipe h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.bloco-equipe ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.bloco-equipe li {
+  margin: 6px 0;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.bandeira-equipe {
+
+    width: 30px;
+    height: 22px;
+    object-fit: cover;
+
+    margin-right: 10px;
+
+    border-radius: 3px;
+
+    vertical-align: middle;
+
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.2);
+
+}
+
+.bloco-equipe h2 {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+}
+
+.sem-pontos {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.card-copa {
+    width: 100%;
+    max-height: 82vh;
+    overflow: auto;
+    background: #020617;
+}
+
+.card-copa iframe {
+    display: block;
+    width: 100%;
+    min-width: 1200px;
+    height: 82vh;
+    border: none;
+}
+
+@media (max-width: 768px) {
+  .card-copa {
+    height: 78vh;
+    overflow: auto;
+  }
+
+  .iframe-scale {
+    width: 170%;
+    height: 133.333%;
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+
+  .iframe-scale iframe {
+    width: 100%;
+    height: 104vh;
+    border: none;
+    display: block;
+  }
+}
+
+/* Layout em duas linhas por participante */
+.celula-bandeiras {
+  padding: 3px 5px 1px;
+  text-align: center;
+  vertical-align: bottom;
+  border-bottom: none;
+}
+
+.celula-ponto-nivel{
+    padding:1px 5px 5px;
+    text-align:center;
+    vertical-align:top;
+    font-size:11px;
+    font-weight:700;
+    color:#e5e7eb;
+    background:inherit;
+}
+
+.celula-bandeiras .pais {
+  display: inline-flex;
+  margin: 0 1px;
+}
+
+.celula-bandeiras .pais img {
+  width: 21px;
+  height: 15px;
+}
+
+/* Remove a linha divisória entre bandeira e ponto */
+tbody tr:nth-child(odd) td {
+  border-bottom: none;
+}
+
+/* Cria separação apenas depois da linha de pontos */
+tbody tr:nth-child(even) td {
+  border-bottom: 1px solid #1e293b;
+}
+
+tr.destacada + tr td,
+tr.apagada + tr td {
+  transition: 0.2s;
+}
+
+/* Top 4 e último colocado: cores nas duas linhas */
+tr.top1 td {
+  background: #3f3305;
+}
+
+tr.top2 td {
+  background: #1e293b;
+}
+
+tr.top3 td {
+  background: #3b1604;
+}
+
+tr.top4 td {
+  background: #0f2f1d;
+}
+
+tr.ultimo td {
+  background: #3f1010;
+}
+
+/* Busca no layout de duas linhas */
+tr.destacada td {
+  background: #1e3a8a !important;
+}
+
+tr.apagada td {
+  color: #475569;
+}
+
+/* Top 4 nas colunas fixas: C, Participante e P */
+tr.top1 td[rowspan="2"] {
+  background: #5c4a06 !important;
+}
+
+tr.top2 td[rowspan="2"] {
+  background: #334155 !important;
+}
+
+tr.top3 td[rowspan="2"] {
+  background: #4a2507 !important;
+}
+
+tr.top4 td[rowspan="2"] {
+  background: #12351f !important;
+}
+
+tr.ultimo td[rowspan="2"] {
+  background: #3f1010 !important;
+}
+
+/* Congelamento correto no layout de duas linhas */
+.fixa-c {
+  position: sticky;
+  left: 0;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  background: #020617;
+  z-index: 40;
+}
+
+.fixa-participante {
+  position: sticky;
+  left: 40px;
+  background: #020617;
+  z-index: 40;
+  text-align: left;
+}
+
+/* Cabeçalho congelado das duas primeiras colunas */
+thead th:first-child {
+  position: sticky;
+  left: 0;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  background: #166534;
+  z-index: 80;
+}
+
+thead th:nth-child(2) {
+  position: sticky;
+  left: 40px;
+  background: #166534;
+  z-index: 80;
+}
+
+/* Busca: apenas células fixas ficam sólidas */
+tr.apagada td.fixa-c,
+tr.apagada td.fixa-participante {
+  background: #020617 !important;
+}
+
+tr.destacada td.fixa-c,
+tr.destacada td.fixa-participante {
+  background: #1e3a8a !important;
+}
+
+.celula-bandeiras,
+.celula-ponto-nivel {
+  text-align: center !important;
+}
+
+.celula-bandeiras .pais {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td[rowspan="2"]{
+    border-bottom: 1px solid #1e293b !important;
+}
+
+@media (min-width: 769px) {
+
+  /* aumenta um pouco a tabela inteira */
+  td {
+    font-size: 15px;
+    padding: 8px 9px;
+  }
+
+  th {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  /* nomes dos participantes */
+  .fixa-participante {
+    font-size: 15px;
+  }
+
+  /* posição e pontuação total */
+  .posicao {
+    font-size: 20px;
+  }
+
+  .pontos {
+    font-size: 19px;
+  }
+
+  /* bandeiras */
+  .celula-bandeiras .pais img {
+    width: 28px;
+    height: 21px;
+  }
+
+  /* pontuação de cada nível */
+  .celula-ponto-nivel {
+    font-size: 14px;
+  }
+
+}
