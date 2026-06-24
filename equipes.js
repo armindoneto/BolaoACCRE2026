@@ -14,12 +14,12 @@ const escudos = {
   "Corinthians": "assets/corinthians.png",
   "Internacional": "assets/internacional.png",
   "Athletico-PR": "assets/athletico.png",
-  "Remo": "assets/remo.png"
-  "Coritiba": "assets/coritiba.png"
-  "Botafogo": "assets/botafogo.png"
-  "Vitória": "assets/vitoria.png"
-  "Santos": "assets/santos.png"
-  "Vasco": "assets/vasco.png"
+  "Remo": "assets/remo.png",
+  "Coritiba": "assets/coritiba.png",
+  "Botafogo": "assets/botafogo.png",
+  "Vitória": "assets/vitoria.png",
+  "Santos": "assets/santos.png",
+  "Vasco": "assets/vasco.png",
   "Chapecoense": "assets/chapecoense.png"
 };
 
