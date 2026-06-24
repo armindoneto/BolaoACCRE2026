@@ -13,7 +13,7 @@ const escudos = {
   "Atlético-MG": "assets/atletico.png",
   "Corinthians": "assets/corinthians.png",
   "Internacional": "assets/internacional.png",
-  "Athletico-PR": "assets/athletico.png",
+  "Athlético-PR": "assets/athletico.png",
   "Remo": "assets/remo.png",
   "Coritiba": "assets/coritiba.png",
   "Botafogo": "assets/botafogo.png",
