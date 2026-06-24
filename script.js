@@ -14,12 +14,12 @@ const escudos = {
   "Corinthians": "assets/corinthians.png",
   "Internacional": "assets/internacional.png",
   "Athletico-PR": "assets/athletico.png",
-  "Remo": "assets/remo.png"
-  "Coritiba": "assets/coritiba.png"
-  "Botafogo": "assets/botafogo.png"
-  "Vitória": "assets/vitoria.png"
-  "Santos": "assets/santos.png"
-  "Vasco": "assets/vasco.png"
+  "Remo": "assets/remo.png",
+  "Coritiba": "assets/coritiba.png",
+  "Botafogo": "assets/botafogo.png",
+  "Vitória": "assets/vitoria.png",
+  "Santos": "assets/santos.png",
+  "Vasco": "assets/vasco.png",
   "Chapecoense": "assets/chapecoense.png"
 };
 
@@ -75,19 +75,6 @@ function preencherCelula(td, valor) {
     return;
   }
 
-  if (bandeiras[texto]) {
-    td.appendChild(criarPais(texto));
-    return;
-  }
-
-  if (texto.includes(";")) {
-    texto.split(";").forEach(item => {
-      const pais = normalizar(item);
-      if (pais) td.appendChild(criarPais(pais));
-    });
-    return;
-  }
-
   td.textContent = texto;
 }
 
@@ -103,8 +90,8 @@ function desenharTabela(linhas) {
   const colunas = Object.keys(linhas[0]);
 
   const colunasFixas = colunas.slice(0, 3);      // C, PARTICIPANTE, P
-  const colunasPontos = colunas.slice(3, 14);    // N1 a N11
-  const colunasBandeiras = colunas.slice(14);    // 16 seleções
+const colunasPontos = colunas.slice(3, 13);
+const colunasBandeiras = colunas.slice(13);
 
   // Cabeçalho
   const trHead = document.createElement("tr");
