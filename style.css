@@ -394,8 +394,8 @@ tr.destacada td.fixa-participante {
 }
 
 .celula-bandeiras .pais img {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
 }
 
@@ -556,8 +556,8 @@ td[rowspan="2"]{
   }
 
 .celula-bandeiras .pais img {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     image-rendering: auto;
 }
 
