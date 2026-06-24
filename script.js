@@ -1,56 +1,26 @@
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQE2-mfvvTNWXF7dpzLmoTkTHryMo0TSxlpFX9kcXiYGyZFGzaXmIs23lJ8NyU8HEXseWYsndO9cD6w/pub?gid=1198074937&single=true&output=csv";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=1851970368&single=true&output=csv";
 
-const bandeiras = {
-  "França": "fr",
-  "Espanha": "es",
-  "Argentina": "ar",
-  "Inglaterra": "gb-eng",
-  "Portugal": "pt",
-  "Brasil": "br",
-  "Holanda": "nl",
-  "Marrocos": "ma",
-  "Bélgica": "be",
-  "Alemanha": "de",
-  "Croácia": "hr",
-  "Colômbia": "co",
-  "Senegal": "sn",
-  "México": "mx",
-  "EUA": "us",
-  "Estados Unidos": "us",
-  "Uruguai": "uy",
-  "Japão": "jp",
-  "Suíça": "ch",
-  "Irã": "ir",
-  "Turquia": "tr",
-  "Equador": "ec",
-  "Áustria": "at",
-  "Coreia do Sul": "kr",
-  "Austrália": "au",
-  "Argélia": "dz",
-  "Egito": "eg",
-  "Canadá": "ca",
-  "Noruega": "no",
-  "Panamá": "pa",
-  "Costa do Marfim": "ci",
-  "Suécia": "se",
-  "Paraguai": "py",
-  "Rep. Tcheca": "cz",
-  "República Tcheca": "cz",
-  "Escócia": "gb-sct",
-  "Tunísia": "tn",
-  "Congo": "cd",
-  "Uzbequistão": "uz",
-  "Catar": "qa",
-  "Iraque": "iq",
-  "África do Sul": "za",
-  "Arábia Saudita": "sa",
-  "Jordânia": "jo",
-  "Bósnia": "ba",
-  "Cabo Verde": "cv",
-  "Gana": "gh",
-  "Curaçao": "cw",
-  "Haiti": "ht",
-  "Nova Zelândia": "nz"
+const escudos = {
+  "Palmeiras": "assets/palmeiras.png",
+  "Flamengo": "assets/flamengo.png",
+  "Cruzeiro": "assets/cruzeiro.png",
+  "Mirassol": "assets/mirassol.png",
+  "Fluminense": "assets/fluminense.png",
+  "Bahia": "assets/bahia.png",
+  "São Paulo": "assets/saopaulo.png",
+  "Bragantino": "assets/bragantino.png",
+  "Grêmio": "assets/gremio.png",
+  "Atlético-MG": "assets/atletico.png",
+  "Corinthians": "assets/corinthians.png",
+  "Internacional": "assets/internacional.png",
+  "Athletico-PR": "assets/athletico.png",
+  "Remo": "assets/remo.png"
+  "Coritiba": "assets/coritiba.png"
+  "Botafogo": "assets/botafogo.png"
+  "Vitória": "assets/vitoria.png"
+  "Santos": "assets/santos.png"
+  "Vasco": "assets/vasco.png"
+  "Chapecoense": "assets/chapecoense.png"
 };
 
 let dados = [];
@@ -78,23 +48,21 @@ function criarCachePesquisa() {
   }));
 }
 
-function criarPais(nome) {
-  const pais = normalizar(nome);
-  const codigo = bandeiras[pais];
-
-  if (!codigo) return document.createTextNode(pais);
+function criarTime(nomeTime) {
+  const time = String(nomeTime || "").trim();
 
   const span = document.createElement("span");
   span.className = "pais";
 
-  const img = document.createElement("img");
-  img.src = `https://flagcdn.com/w40/${codigo}.png`;
-  img.alt = pais;
-
-  const texto = document.createElement("span");
-  texto.textContent = pais;
-
-  span.appendChild(img);
+  if (escudos[time]) {
+    const img = document.createElement("img");
+    img.src = escudos[time];
+    img.alt = time;
+    img.title = time;
+    span.appendChild(img);
+  } else {
+    span.textContent = time;
+  }
 
   return span;
 }
@@ -221,11 +189,11 @@ if (coluna === colunasFixas[1]) td.classList.add("fixa-participante");
       const tdPonto = document.createElement("td");
       tdPonto.classList.add("celula-ponto-nivel");
 
-      const bandeirasDoNivel = obterBandeirasDoNivel(linha, colunasBandeiras, indiceNivel);
+const timesDoNivel = obterTimesDoNivel(linha, colunasBandeiras, indiceNivel);
 
-      bandeirasDoNivel.forEach(nomePais => {
-        tdBandeiras.appendChild(criarPais(nomePais));
-      });
+timesDoNivel.forEach(nomeTime => {
+  tdBandeiras.appendChild(criarTime(nomeTime));
+});
 
       tdPonto.textContent = linha[colunaPonto];
 
@@ -238,25 +206,9 @@ if (coluna === colunasFixas[1]) td.classList.add("fixa-participante");
   });
 }
 
-function obterBandeirasDoNivel(linha, colunasBandeiras, indiceNivel) {
-  // N1 a N6 têm 1 seleção
-  if (indiceNivel <= 5) {
-    const coluna = colunasBandeiras[indiceNivel];
-    return coluna ? [normalizar(linha[coluna])] : [];
-  }
-
-  // N7 a N11 têm 2 seleções
-  const indiceInicial = 6 + ((indiceNivel - 6) * 2);
-
-  const coluna1 = colunasBandeiras[indiceInicial];
-  const coluna2 = colunasBandeiras[indiceInicial + 1];
-
-  const selecoes = [];
-
-  if (coluna1) selecoes.push(normalizar(linha[coluna1]));
-  if (coluna2) selecoes.push(normalizar(linha[coluna2]));
-
-  return selecoes.filter(Boolean);
+function obterTimesDoNivel(linha, colunasTimes, indiceNivel) {
+  const coluna = colunasTimes[indiceNivel];
+  return coluna ? [String(linha[coluna] || "").trim()] : [];
 }
 
 const busca = document.querySelector("#busca");
