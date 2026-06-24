@@ -1,56 +1,26 @@
 const CSV_EQUIPES_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=587354078&single=true&output=csv";
 
-const bandeiras = {
-  "França": "fr",
-  "Espanha": "es",
-  "Argentina": "ar",
-  "Inglaterra": "gb-eng",
-  "Portugal": "pt",
-  "Brasil": "br",
-  "Holanda": "nl",
-  "Marrocos": "ma",
-  "Bélgica": "be",
-  "Alemanha": "de",
-  "Croácia": "hr",
-  "Colômbia": "co",
-  "Senegal": "sn",
-  "México": "mx",
-  "EUA": "us",
-  "Estados Unidos": "us",
-  "Uruguai": "uy",
-  "Japão": "jp",
-  "Suíça": "ch",
-  "Irã": "ir",
-  "Turquia": "tr",
-  "Equador": "ec",
-  "Áustria": "at",
-  "Coreia do Sul": "kr",
-  "Austrália": "au",
-  "Argélia": "dz",
-  "Egito": "eg",
-  "Canadá": "ca",
-  "Noruega": "no",
-  "Panamá": "pa",
-  "Costa do Marfim": "ci",
-  "Suécia": "se",
-  "Paraguai": "py",
-  "Rep. Tcheca": "cz",
-  "República Tcheca": "cz",
-  "Escócia": "gb-sct",
-  "Tunísia": "tn",
-  "Congo": "cd",
-  "Uzbequistão": "uz",
-  "Catar": "qa",
-  "Iraque": "iq",
-  "África do Sul": "za",
-  "Arábia Saudita": "sa",
-  "Jordânia": "jo",
-  "Bósnia": "ba",
-  "Cabo Verde": "cv",
-  "Gana": "gh",
-  "Curaçao": "cw",
-  "Haiti": "ht",
-  "Nova Zelândia": "nz"
+const escudos = {
+  "Palmeiras": "assets/palmeiras.png",
+  "Flamengo": "assets/flamengo.png",
+  "Cruzeiro": "assets/cruzeiro.png",
+  "Mirassol": "assets/mirassol.png",
+  "Fluminense": "assets/fluminense.png",
+  "Bahia": "assets/bahia.png",
+  "São Paulo": "assets/saopaulo.png",
+  "Bragantino": "assets/bragantino.png",
+  "Grêmio": "assets/gremio.png",
+  "Atlético-MG": "assets/atletico.png",
+  "Corinthians": "assets/corinthians.png",
+  "Internacional": "assets/internacional.png",
+  "Athletico-PR": "assets/athletico.png",
+  "Remo": "assets/remo.png"
+  "Coritiba": "assets/coritiba.png"
+  "Botafogo": "assets/botafogo.png"
+  "Vitória": "assets/vitoria.png"
+  "Santos": "assets/santos.png"
+  "Vasco": "assets/vasco.png"
+  "Chapecoense": "assets/chapecoense.png"
 };
 
 let dadosEquipes = [];
@@ -100,11 +70,11 @@ linhas.forEach(linha => {
 
 const titulo = document.createElement("h2");
 
-const codigo = bandeiras[time];
+const escudo = escudos[time];
 
-if (codigo) {
+if (escudo) {
   const img = document.createElement("img");
-  img.src = `https://flagcdn.com/w40/${codigo}.png`;
+  img.src = escudo;
   img.alt = time;
   img.className = "bandeira-equipe";
 
