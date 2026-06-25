@@ -586,22 +586,3 @@ td[rowspan="2"]{
   object-fit: contain;
   image-rendering: auto;
 }
-
-.celula-bandeiras {
-  text-align: center;
-}
-
-.celula-bandeiras .pais {
-  display: inline-flex;
-  width: 28px;
-  height: 28px;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.celula-bandeiras .pais img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
