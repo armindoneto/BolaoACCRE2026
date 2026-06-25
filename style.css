@@ -1,17 +1,25 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+
   background:
-radial-gradient(circle at top left,
-#3CAC3B55 0%,
-transparent 30%),
-radial-gradient(circle at top,
-#2A398D66 0%,
-transparent 40%),
-radial-gradient(circle at top right,
-#E61D2555 0%,
-transparent 30%),
-#020617;
+    radial-gradient(
+      circle at center top,
+      rgba(255, 223, 0, 0.14),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 39, 118, 0.35),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #063b1e 0%,
+      #07130a 45%,
+      #001b4d 100%
+    );
+
   color: #e5e7eb;
 }
 
@@ -263,9 +271,9 @@ tr.destacada td.fixa-participante {
 }
 
 .botao-menu.ativo {
-  background: #1e293b;
-  border: 2px solid #2A398D;
-  color: white;
+    background: #114d2f;
+    border: 2px solid #FFDF00;
+    color: white;
 }
 
 .card-equipes {
