@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copa do Mundo 2026</title>
+
+  <title>Classificação - Brasileirão</title>
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
   <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 
 <body>
   <header class="hero">
-    <img src="assets/banner.png" alt="Bolão ACC-RE" class="banner-titulo">
+    <img src="assets/banner.png" alt="Bolão Brasileirão" class="banner-titulo">
   </header>
 
   <nav class="menu-principal">
@@ -21,20 +27,22 @@
   <div class="container">
     <div class="painel-wrapper">
       <div class="barra-painel">
-        <div class="titulo-barra">Brasileirão 2026 2026</div>
+        <div class="titulo-barra">🏆 Classificação do Campeonato</div>
       </div>
 
-     <div class="card-copa">
-  <div class="iframe-scale">
-    <iframe
-      src="https://widget.api-futebol.com.br/render/widget_6f771a47cecdf28e"
-      title="API Futebol - Widget"
-      loading="lazy"
-      referrerpolicy="unsafe-url">
-    </iframe>
-  </div>
-</div>
+      <div class="card card-classificacao">
+        <table id="tabela-classificacao">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
   </div>
+
+  <footer>
+    2026 - v1.0.0 - Desenvolvido por Armindo Neto
+  </footer>
+
+  <script src="copa.js"></script>
 </body>
 </html>
