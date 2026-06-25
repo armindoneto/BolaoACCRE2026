@@ -92,7 +92,16 @@ function desenharTabela(linhas) {
   const colunasFixas = colunas.slice(0, 3);      // C, PARTICIPANTE, P
 const colunasPontos = colunas.slice(3, 13);
 const colunasBandeiras = colunas.slice(13);
+const colocacoesDestaque = [...new Set(
+  linhas
+    .map(linha => Number(String(linha[colunasFixas[0]] || "").trim()))
+    .filter(colocacao => !isNaN(colocacao))
+)].slice(0, 3);
 
+const ultimaColocacao = Number(
+  String(linhas[linhas.length - 1][colunasFixas[0]] || "").trim()
+);
+  
   // Cabeçalho
   const trHead = document.createElement("tr");
 
@@ -119,30 +128,28 @@ const colunasBandeiras = colunas.slice(13);
     trBandeiras.dataset.indice = posicaoOriginal;
 trPontos.dataset.indice = posicaoOriginal;
 
-    if (posicaoOriginal === 0) {
-      trBandeiras.classList.add("top1");
-      trPontos.classList.add("top1");
-    }
+const colocacao = Number(String(linha[colunasFixas[0]] || "").trim());
+const indiceDestaque = colocacoesDestaque.indexOf(colocacao);
 
-    if (posicaoOriginal === 1) {
-      trBandeiras.classList.add("top2");
-      trPontos.classList.add("top2");
-    }
+if (indiceDestaque === 0) {
+  trBandeiras.classList.add("top1");
+  trPontos.classList.add("top1");
+}
 
-    if (posicaoOriginal === 2) {
-      trBandeiras.classList.add("top3");
-      trPontos.classList.add("top3");
-    }
+if (indiceDestaque === 1) {
+  trBandeiras.classList.add("top2");
+  trPontos.classList.add("top2");
+}
 
-    if (posicaoOriginal === 3) {
-      trBandeiras.classList.add("top4");
-      trPontos.classList.add("top4");
-    }
+if (indiceDestaque === 2) {
+  trBandeiras.classList.add("top3");
+  trPontos.classList.add("top3");
+}
 
-    if (posicaoOriginal === dados.length - 1) {
-      trBandeiras.classList.add("ultimo");
-      trPontos.classList.add("ultimo");
-    }
+if (colocacao === ultimaColocacao) {
+  trBandeiras.classList.add("ultimo");
+  trPontos.classList.add("ultimo");
+}
 
     // Colunas fixas: C, PARTICIPANTE, P
     colunasFixas.forEach(coluna => {
