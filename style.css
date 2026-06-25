@@ -586,3 +586,11 @@ td[rowspan="2"]{
   object-fit: contain;
   image-rendering: auto;
 }
+
+#tabela th:nth-child(n+4),
+#tabela td.celula-bandeiras,
+#tabela td.celula-ponto-nivel {
+  width: 44px;
+  min-width: 44px;
+  max-width: 44px;
+}
