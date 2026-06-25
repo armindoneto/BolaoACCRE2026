@@ -562,3 +562,27 @@ td[rowspan="2"]{
     font-size: 14px;
 }
 }
+.card-classificacao {
+  max-height: 72vh;
+  overflow: auto;
+}
+
+#tabela-classificacao {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.time-classificacao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.time-classificacao img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: auto;
+}
