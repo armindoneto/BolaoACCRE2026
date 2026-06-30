@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
   <link rel="stylesheet" href="style.css" />
-
+<script src="config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 
@@ -18,11 +18,16 @@
     <img src="assets/banner.png" alt="Bolão Brasileirão" class="banner-titulo">
   </header>
 
-  <nav class="menu-principal">
-    <a href="index.html" class="botao-menu">Tabela</a>
-    <a href="equipes.html" class="botao-menu">Times</a>
-    <a href="copa.html" class="botao-menu ativo">Turno</a>
-  </nav>
+  <nav class="menu-turno">
+  <a href="index.html?turno=1" class="botao-turno" data-turno="1">1º TURNO</a>
+  <a href="index.html?turno=2" class="botao-turno" data-turno="2">2º TURNO</a>
+</nav>
+  
+<nav class="menu-principal">
+  <a href="index.html" class="botao-menu ativo" data-link-turno>Tabela</a>
+  <a href="equipes.html" class="botao-menu" data-link-turno>Times</a>
+  <a href="copa.html" class="botao-menu" data-link-turno>Turno</a>
+</nav>
 
   <div class="container">
     <div class="painel-wrapper">
