@@ -1,5 +1,4 @@
-const CSV_CLASSIFICACAO_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=345592738&single=true&output=csv";
+const CSV_CLASSIFICACAO_URL = CONFIG[turnoAtual].classificacao;
 
 const escudos = {
   "PALMEIRAS": "assets/palmeiras.png",

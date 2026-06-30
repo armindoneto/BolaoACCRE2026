@@ -1,5 +1,4 @@
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=1851970368&single=true&output=csv";
-
+const CSV_URL = CONFIG[turnoAtual].tabela;
 const escudos = {
   "Palmeiras": "assets/palmeiras.png",
   "Flamengo": "assets/flamengo.png",

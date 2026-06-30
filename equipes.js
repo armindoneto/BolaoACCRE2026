@@ -1,4 +1,4 @@
-const CSV_EQUIPES_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=587354078&single=true&output=csv";
+const CSV_EQUIPES_URL = CONFIG[turnoAtual].equipes;
 
 const escudos = {
   "Palmeiras": "assets/palmeiras.png",
