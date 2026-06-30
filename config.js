@@ -1,8 +1,8 @@
 const CONFIG = {
   turno1: {
-    tabela: "CSV_TABELA_1_TURNO",
-    equipes: "CSV_EQUIPES_1_TURNO",
-    classificacao: "CSV_CLASSIFICACAO_1_TURNO"
+    tabela: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=1851970368&single=true&output=csv",
+    equipes: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=587354078&single=true&output=csv",
+    classificacao: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSeEGAKmGG2pZN206tc_Dlkz4GGZa9fU4WGxRUbAsTTvRI9Ku5Dvyp5Sy-3FgpWp9GwqKNb73VOHEE2/pub?gid=345592738&single=true&output=csv"
   },
 
   turno2: {
