@@ -6,9 +6,9 @@ const CONFIG = {
   },
 
   turno2: {
-    tabela: "CSV_TABELA_2_TURNO",
-    equipes: "CSV_EQUIPES_2_TURNO",
-    classificacao: "CSV_CLASSIFICACAO_2_TURNO"
+    tabela: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLOA-hCfAK-IxHZBlS4PquUfI4ArLQZ2e8Su7UCzdTmfQaRIyU8oqj4JfAAyoUkAQ6eVnilrreU_t2/pub?gid=1851970368&single=true&output=csv",
+    equipes: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLOA-hCfAK-IxHZBlS4PquUfI4ArLQZ2e8Su7UCzdTmfQaRIyU8oqj4JfAAyoUkAQ6eVnilrreU_t2/pub?gid=587354078&single=true&output=csv",
+    classificacao: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLOA-hCfAK-IxHZBlS4PquUfI4ArLQZ2e8Su7UCzdTmfQaRIyU8oqj4JfAAyoUkAQ6eVnilrreU_t2/pub?gid=345592738&single=true&output=csv"
   }
 };
 
