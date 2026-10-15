@@ -13,8 +13,8 @@ const CONFIG = {
 };
 
 const params = new URLSearchParams(window.location.search);
-const turnoAtual = params.get("turno") === "2" ? "turno2" : "turno1";
-const numeroTurno = turnoAtual === "turno2" ? "2" : "1";
+const turnoAtual = params.get("turno") === "1" ? "turno1" : "turno2";
+const numeroTurno = turnoAtual === "turno1" ? "1" : "2";
 
 function aplicarLinksTurno() {
   const links = document.querySelectorAll("[data-link-turno]");
